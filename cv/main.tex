@@ -1,0 +1,272 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.05 cm,
+    bottom=1.05 cm,
+    left=1.35 cm,
+    right=1.35 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[
+    pdftitle={Qi Xu's CV},
+    pdfauthor={Qi Xu},
+    colorlinks=true,
+    urlcolor=primarycolor
+]{hyperref}
+
+% XeLaTeX Font Setup
+\usepackage{fontspec}
+% Fallback to Charter if available, or a clean serif
+\setmainfont{Charter} 
+
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{xparse}
+
+% Color Definitions
+\definecolor{primarycolor}{RGB}{5, 57, 101}
+\definecolor{accentcolor}{RGB}{18, 105, 148}
+\definecolor{secondarycolor}{RGB}{91, 99, 110}
+\definecolor{rulecolor}{RGB}{192, 208, 221}
+\definecolor{tagbg}{RGB}{235, 244, 249}
+\definecolor{bodytext}{RGB}{23, 30, 38}
+\colorlet{PRIMARYCOLOR}{primarycolor}
+\colorlet{SECONDARYCOLOR}{secondarycolor}
+
+% Typography Settings
+\raggedright
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\linespread{0.94}
+\color{bodytext}
+
+% Section Header Styling
+\titleformat{\section}
+  {\color{primarycolor}\bfseries\large}
+  {}{0pt}{}
+  [\vspace{1pt}{\color{rulecolor}\titlerule[0.7pt]}]
+\titlespacing{\section}{0pt}{0.24 cm}{0.12 cm}
+
+% Custom Commands
+\newcommand{\entrytitle}[1]{{\bfseries #1}}
+\newcommand{\entrylocation}[1]{{\itshape\color{secondarycolor}#1}}
+\newcommand{\entrydate}[1]{{\small\color{secondarycolor}#1}}
+\newcommand{\entrysubtitle}[1]{{\small\color{secondarycolor}#1}}
+
+\newcommand{\pubtag}[1]{%
+    {\setlength{\fboxsep}{1.3pt}\colorbox{tagbg}{\textsf{\scriptsize\bfseries\color{primarycolor}#1}}}%
+}
+\newcommand{\firstauthor}{\pubtag{First Author}}
+\newcommand{\cofirst}{\pubtag{Co-First Author}}
+\newcommand{\spotlight}{\pubtag{Spotlight}}
+\newcommand{\corrauthor}{\pubtag{Corresponding Author}}
+
+\newcommand{\contactlink}[2]{\href{#1}{\color{primarycolor}#2}}
+\newcommand{\linkicon}[2]{\href{#1}{\small\color{accentcolor}\faLink\ \textsf{#2}}}
+\newcommand{\githubicon}[2]{\href{#1}{\small\color{accentcolor}\faGithub\ \textsf{#2}}}
+\newcommand{\namemark}{\textsuperscript{*}}
+\newcommand{\corrmark}{\textsuperscript{\ensuremath{\dagger}}}
+
+% Logo Entry Command
+\newcommand{\logoentry}[4]{
+    \begingroup
+    \renewcommand{\tabularxcolumn}[1]{m{##1}}
+    \begin{tabularx}{\textwidth}{@{}>{\centering\arraybackslash}m{1.75cm}@{\hspace{0.38cm}}X>{\raggedleft\arraybackslash}p{2.45cm}@{}}
+        \includegraphics[width=1.68cm, height=0.95cm, keepaspectratio]{#1} &
+        \begin{minipage}[c]{\linewidth}
+            \entrytitle{#2}\\[-1pt]
+            \entrysubtitle{#4}
+        \end{minipage} &
+        \entrydate{#3}
+    \end{tabularx}
+    \endgroup
+    \vspace{0.055cm}
+}
+
+% Education Entry Command
+\newcommand{\educationentry}[5]{
+    \begingroup
+    \renewcommand{\tabularxcolumn}[1]{m{##1}}
+    \begin{tabularx}{\textwidth}{@{}>{\centering\arraybackslash}m{1.75cm}@{\hspace{0.38cm}}X>{\raggedleft\arraybackslash}p{2.45cm}@{}}
+        \includegraphics[width=1.68cm, height=0.95cm, keepaspectratio]{#1} &
+        \begin{minipage}[c]{\linewidth}
+            \entrytitle{#2}\\[-1pt]
+            \entrysubtitle{#4}\\[-1pt]
+            \ifthenelse{\equal{#5}{}}{}{{\small\color{secondarycolor}#5}}
+        \end{minipage} &
+        \entrydate{#3}
+    \end{tabularx}
+    \endgroup
+    \vspace{0.065cm}
+}
+
+% Experience Entry Command
+\newcommand{\experienceentry}[5]{
+    \begingroup
+    \renewcommand{\tabularxcolumn}[1]{m{##1}}
+    \begin{tabularx}{\textwidth}{@{}>{\centering\arraybackslash}m{1.75cm}@{\hspace{0.38cm}}X@{}}
+        \includegraphics[width=1.68cm, height=0.95cm, keepaspectratio]{#1} &
+        \begin{minipage}[c]{\linewidth}
+            \entrytitle{#2}\hfill \entrydate{#3}\\[-1pt]
+            \entrylocation{#4}
+            \begin{itemize}[
+                topsep=0.04 cm,
+                parsep=0 cm,
+                itemsep=0.02 cm,
+                leftmargin=0.45 cm
+            ]
+                #5
+            \end{itemize}
+        \end{minipage}
+    \end{tabularx}
+    \endgroup
+    \vspace{0.04cm}
+}
+
+% Publication Entry Command
+% Usage: \pubentry[height]{logo}{title}{date}{tags}{authors}{desc}
+\newcommand{\pubentry}[7][1.05cm]{
+    \begingroup
+    \renewcommand{\tabularxcolumn}[1]{m{##1}}
+    \begin{tabularx}{\textwidth}{@{}>{\centering\arraybackslash}m{1.75cm}@{\hspace{0.38cm}}X>{\raggedleft\arraybackslash}p{1.05cm}@{}}
+        \includegraphics[height=#1, width=1.68cm, keepaspectratio]{#2} &
+        \begin{minipage}[c]{\linewidth}
+            \entrytitle{#3}\\[-1pt]
+            {\small #5}\\[-1pt]
+            {\small #6}\\[-1pt]
+            {\small\RaggedRight #7}
+        \end{minipage} &
+        \entrydate{#4}
+    \end{tabularx}
+    \endgroup
+    \vspace{0.055cm}
+}
+
+% List Environment
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.03 cm,
+        parsep=0 cm,
+        itemsep=0.02 cm,
+        leftmargin=2.30 cm
+    ]
+}{
+    \end{itemize}
+}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\fontsize{28}{31}\selectfont\bfseries\color{primarycolor}Qi Xu}\\[-1pt]
+    {\small\textsf{\color{secondarycolor}PhD Student in Artificial Intelligence @ Westlake University}}\\[5pt]
+    \small
+    \faEnvelope\ \contactlink{mailto:insomniaaac@qq.com}{insomniaaac@qq.com}\quad
+    \faPhone\ +86-15527361765\quad
+    \faGlobe\ \contactlink{https://xuqi.space/}{xuqi.space}\quad
+    \faGithub\ \contactlink{https://github.com/insomniaaac}{github.com/insomniaaac}
+\end{center}
+
+\vspace{-0.08 cm}
+
+% --- EDUCATION ---
+\section{EDUCATION}
+\educationentry{logos/westlake-logo.png}{Westlake University}{2026 -- Present}{PhD Student in Artificial Intelligence}{Supervised by \contactlink{https://ethliup.github.io/}{Peidong Liu}; Research: Embodied AI, Multimodal Large Language Models}
+\educationentry{logos/whu-logo.png}{Wuhan University}{2023 -- 2026}{Master in Pattern Recognition and Intelligent Systems}{Research: Computer Vision, 3D Reconstruction, Multimodal Learning}
+\educationentry{logos/whu-logo.png}{Wuhan University}{2019 -- 2023}{B.S. in Spatial Information and Digital Technology}{}
+
+% --- EXPERIENCE ---
+\section{EXPERIENCE}
+\experienceentry{logos/bytedance-color.png}{ByteDance, TikTok Live -- LLM Applications Team}{2025 -- 2026}{Research Intern}{
+    \item Developed and optimized \textbf{Multi-Modal Large Language Models (MLLMs)} for temporal grounding tasks using SFT and Reinforcement Learning (RL) pipelines.
+    \item Built scalable data pipelines for massive MLLM training, enabling efficient collection and annotation of high-quality temporal grounding datasets.
+    \item Conducted \textbf{large-scale distributed training on hundreds of GPUs}, optimizing training efficiency and model convergence for production-level deployment.
+    \item Designed agentic workflows leveraging LLMs to automate real-time interaction analysis and optimize content distribution within the TikTok Live ecosystem.
+}
+
+% --- SELECTED PUBLICATIONS ---
+\section{SELECTED PUBLICATIONS}
+
+\pubentry[1.42cm]{logos/NeurIPS_logo.png}
+{SIU3R: Simultaneous Scene Understanding and 3D Reconstruction Beyond Feature Alignment}
+{2025}
+{\pubtag{NeurIPS 25 Spotlight} \quad \linkicon{https://insomniaaac.github.io/siu3r/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2507.02705}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/SIU3R}{Code}}
+{\textbf{\underline{Qi Xu*}}, Dongxu Wei*, Lingzhe Zhao, Wenpu Li, Zhangchi Huang, Shunping Ji, Peidong Liu}
+{Proposed an alignment-free framework achieving SOTA 3D reconstruction and scene understanding from unposed images via shared pixel-aligned 3D representation.}
+
+\pubentry{logos/ICML-logo.png}
+{Towards One-to-Many Temporal Grounding}
+{2026}
+{\pubtag{ICML 26} \quad \linkicon{https://insomniaaac.github.io/OMTG/}{Project Page}}
+{\textbf{\underline{Qi Xu*}}, Yue Tan*, Shihao Chen, Jiahao Meng, Anran Wang, Shunping Ji, Hao Fei, Xiangtai Li}
+{Introduced the first systematic solution for OMTG, featuring a 56k-sample dataset and RL training with CoT-based rewards; outperformed Gemini 2.5 Pro by 15.85\%.}
+
+\pubentry[1.42cm]{logos/NeurIPS_logo.png}
+{Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale}
+{2026}
+{\pubtag{NeurIPS Submission} \quad \linkicon{https://wswdx.github.io/3DRAE}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.11331}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/3DRAE}{Code}}
+{Dongxu Wei*, \textbf{\underline{Qi Xu*}}, Zhiqi Li, Hangning Zhou, Cong Qiu, Hailong Qin, Mu Yang, Zhaopeng Cui, Peidong Liu}
+{First approach to perform 3D scene generation directly within an implicit 3D latent space using 3D Diffusion Transformers.}
+
+\pubentry{logos/ICML-logo.png}
+{HiCI: Hierarchical Construction--Integration for Long-Context Attention}
+{2026}
+{\pubtag{ICML 26} \quad \linkicon{https://arxiv.org/abs/2603.20843}{ArXiv} \quad \githubicon{https://github.com/zengxyyu/HiCI}{Code}}
+{Xiangyu Zeng, \textbf{\underline{Qi Xu}}, Yunke Wang, Chang Xu}
+{Efficient long-context modeling using hierarchical attention, extending LLaMA-2 to 100K tokens with only 5.5\% additional parameters.}
+
+\pubentry[1.42cm]{logos/NeurIPS_logo.png}
+{VideoZeroBench: Probing the Limits of Video MLLMs with Spatio-Temporal Evidence Verification}
+{2026}
+{\pubtag{NeurIPS Submission} \quad \linkicon{https://marinero4972.github.io/projects/VideoZeroBench/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.01569}{ArXiv} \quad \githubicon{https://github.com/marinero4972/VideoZeroBench}{Code}}
+{Jiahao Meng, Tan Yue, \textbf{\underline{Qi Xu}}, Haochen Wang, Zhongwei Ren, Weisong Liu, Yuhao Wang, Renrui Zhang, Yunhai Tong, Haodong Duan}
+{A hierarchical benchmark exposing the gap between surface-level answer correctness and genuine evidence-based reasoning in long-video understanding.}
+
+\pubentry[1.42cm]{logos/NeurIPS_logo.png}
+{E-MoFlow: Learning Egomotion and Optical Flow from Event Data via Implicit Regularization}
+{2025}
+{\pubtag{NeurIPS 25} \quad \linkicon{https://akawincent.github.io/EMoFlow/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2510.12753}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/E-MoFlow}{Code}}
+{Wenpu Li, Bangyan Liao, Yi Zhou, \textbf{\underline{Qi Xu}}, Pian Wan, Peidong Liu}
+{An unsupervised framework for joint ego-motion and optical flow estimation using implicit neural representations and differential geometric constraints.}
+
+% --- ADVISEE PUBLICATIONS ---
+\newpage
+\section{PUBLICATIONS WITH ADVISED STUDENTS}
+
+\pubentry{logos/eccv-logo.png}
+{SupIR-GS: Thermal Infrared Super-Resolution Novel View Synthesis with Imaging-Calibrated 3DGS}
+{2026}
+{\pubtag{Submission} \quad \corrauthor}
+{Jin Liu, Haodong Li, Jiagang Chen, Dabin leng, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, \textbf{\underline{Qi Xu}}\corrmark, Zhiwen Zheng, Xingru Huang\corrmark}
+{Reconstructs high-resolution 3D thermal scenes from low-resolution inputs via physics-informed degradation modeling.}
+
+\pubentry{logos/eccv-logo.png}
+{Physically Grounded Dual-Opacity Gaussian Splatting for Joint RGB-TIR Reconstruction}
+{2026}
+{\pubtag{Submission} \quad \corrauthor}
+{Jin Liu, Dabin leng, Jiagang Chen, Haodong Li, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, Zhiwen Zheng, Xingru Huang\corrmark, \textbf{\underline{Qi Xu}}\corrmark}
+{A unified RGB-TIR reconstruction framework resolving cross-spectral visibility conflicts through thermal field modeling.}
+
+% --- SKILLS ---
+\section{TECHNICAL SKILLS}
+\begin{description}[leftmargin=0pt, font=\bfseries\color{primarycolor}, itemsep=0pt]
+    \item[Deep Learning:] PyTorch, Transformers, MLLMs, Diffusion Models, Reinforcement Learning
+    \item[Engineering:] Ray, Distributed Training (Multi-GPU/Cluster), Linux, Data Pipelines
+    \item[Research Interests:] Agentic Workflows, Vision Foundation Models, 3D Scene Understanding
+    \item[Languages:] English (CET6), Mandarin (Native)
+\end{description}
+
+\end{document}
