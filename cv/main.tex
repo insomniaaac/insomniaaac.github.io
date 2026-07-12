@@ -188,9 +188,13 @@
 \educationentry{logos/whu-logo.png}{Wuhan University}{2023 -- 2026}{Master in Pattern Recognition and Intelligent Systems}{Research: Computer Vision, 3D Reconstruction, Multimodal Learning}
 \educationentry{logos/whu-logo.png}{Wuhan University}{2019 -- 2023}{B.S. in Spatial Information and Digital Technology}{}
 
+% --- RESEARCH INTERESTS ---
+\section{RESEARCH INTERESTS}
+\textbf{Multimodal Large Language Models (MLLMs)}, with emphasis on video reasoning and spatio-temporal grounding. Worked closely with \contactlink{https://lxtgh.github.io/}{Dr. Xiangtai Li}.
+
 % --- EXPERIENCE ---
 \section{EXPERIENCE}
-\experienceentry{logos/bytedance-color.png}{ByteDance, TikTok Live -- LLM Applications Team}{2025 -- 2026}{Research Intern}{
+\experienceentry{logos/bytedance-color.png}{ByteDance, TikTok Global Live LLM Strategy Department}{2025 -- 2026}{Research Intern; Mentored by \contactlink{https://lxtgh.github.io/}{Xiangtai Li}}{
     \item Developed and optimized \textbf{Multi-Modal Large Language Models (MLLMs)} for temporal grounding tasks using SFT and Reinforcement Learning (RL) pipelines.
     \item Built scalable data pipelines for massive MLLM training, enabling efficient collection and annotation of high-quality temporal grounding datasets.
     \item Conducted \textbf{large-scale distributed training on hundreds of GPUs}, optimizing training efficiency and model convergence for production-level deployment.
@@ -203,76 +207,84 @@
 \pubentry[1.42cm]{logos/NeurIPS_logo.png}
 {SIU3R: Simultaneous Scene Understanding and 3D Reconstruction Beyond Feature Alignment}
 {2025}
-{\pubtag{NeurIPS 25 Spotlight} \quad \linkicon{https://insomniaaac.github.io/siu3r/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2507.02705}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/SIU3R}{Code}}
+{\pubtag{NeurIPS 25 Spotlight} \quad \pubtag{163 GitHub Stars} \quad \pubtag{12 Citations} \quad \linkicon{https://insomniaaac.github.io/siu3r/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2507.02705}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/SIU3R}{Code}}
 {\textbf{\underline{Qi Xu*}}, Dongxu Wei*, Lingzhe Zhao, Wenpu Li, Zhangchi Huang, Shunping Ji, Peidong Liu}
-{Proposed an alignment-free framework achieving SOTA 3D reconstruction and scene understanding from unposed images via shared pixel-aligned 3D representation.}
+{Introduced an alignment-free framework for simultaneous 3D reconstruction and scene understanding from unposed images via a shared pixel-aligned 3D representation.\\[-1pt]
+\textbf{My Contributions:} Project Lead, Core Idea Contributor, and primary code implementer; led benchmarking, ablation analysis, and paper writing.}
 
 \pubentry{logos/ICML-logo.png}
 {Towards One-to-Many Temporal Grounding}
 {2026}
 {\pubtag{ICML 26} \quad \linkicon{https://insomniaaac.github.io/OMTG/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2606.06294}{ArXiv}}
 {\textbf{\underline{Qi Xu*}}, Yue Tan*, Shihao Chen, Jiahao Meng, Anran Wang, Shunping Ji, Hao Fei, Xiangtai Li}
-{Introduced the first systematic solution for OMTG, featuring a 56k-sample dataset and RL training with CoT-based rewards; outperformed Gemini 2.5 Pro by 15.85\%.}
+{Introduced the first systematic solution for OMTG, featuring a 56k-sample dataset and RL training with CoT-based rewards; outperformed Gemini 2.5 Pro by 15.85\%.\\[-1pt]
+\textbf{My Contributions:} Core Idea Contributor, code implementer, and data pipeline constructor; led data construction, SFT/RL training pipeline implementation, reward design, model training, benchmarking, and paper writing.}
 
-\pubentry[1.42cm]{logos/NeurIPS_logo.png}
-{Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale}
+\pubentry[0.82cm]{logos/arxiv-logo.png}
+{VideoZeroBench: Probing the Limits of Video MLLMs with Spatio-Temporal Evidence Verification}
 {2026}
-{\pubtag{NeurIPS Submission} \quad \linkicon{https://wswdx.github.io/3DRAE}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.11331}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/3DRAE}{Code}}
-{Dongxu Wei*, \textbf{\underline{Qi Xu*}}, Zhiqi Li, Hangning Zhou, Cong Qiu, Hailong Qin, Mu Yang, Zhaopeng Cui, Peidong Liu}
-{First approach to perform 3D scene generation directly within an implicit 3D latent space using 3D Diffusion Transformers.}
+{\pubtag{arXiv 26} \quad \linkicon{https://marinero4972.github.io/projects/VideoZeroBench/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.01569}{ArXiv} \quad \githubicon{https://github.com/marinero4972/VideoZeroBench}{Code}}
+{Jiahao Meng, Tan Yue, \textbf{\underline{Qi Xu}}, Haochen Wang, Zhongwei Ren, Weisong Liu, Yuhao Wang, Renrui Zhang, Yunhai Tong, Haodong Duan}
+{A hierarchical long-video QA benchmark that verifies model answers with temporal intervals and spatial boxes under a five-level evidence protocol.\\[-1pt]
+\textbf{My Contributions:} Co-designed the five-level spatio-temporal evidence evaluation protocol; designed and implemented the annotation tool and guidelines; constructed approximately 200 complete QA-evidence samples.}
+
+\pubentry[0.82cm]{logos/arxiv-logo.png}
+{Watch, Remember, Reason: Human-View Video Understanding with MLLMs}
+{2026}
+{\pubtag{arXiv 26} \quad \linkicon{https://arxiv.org/abs/2606.07433}{ArXiv} \quad \githubicon{https://github.com/marinero4972/Awesome-HumanView-VideoUnderstanding}{GitHub}}
+{Jiahao Meng, Yue Tan, \textbf{\underline{Qi Xu}}, Kuan Gao, Weisong Liu, Yanwei Li, Xiangtai Li, Lingdong Kong, Haochen Wang, Qianyu Zhou, Jiangning Zhang, Guangliang Cheng, Yunhai Tong, Lu Qi, Minghsuan Yang}
+{Surveyed human-view video understanding with MLLMs through watching, remembering, and reasoning abilities for long, multimodal, and knowledge-intensive video scenarios.\\[-1pt]
+\textbf{My Contributions:} organized literature for the Memory section, created figures and tables, and contributed to paper writing and revision.}
 
 \pubentry{logos/ICML-logo.png}
 {HiCI: Hierarchical Construction--Integration for Long-Context Attention}
 {2026}
 {\pubtag{ICML 26} \quad \linkicon{https://arxiv.org/abs/2603.20843}{ArXiv} \quad \githubicon{https://github.com/zengxyyu/HiCI}{Code}}
 {Xiangyu Zeng, \textbf{\underline{Qi Xu}}, Yunke Wang, Chang Xu}
-{Efficient long-context modeling using hierarchical attention, extending LLaMA-2 to 100K tokens with only 5.5\% additional parameters.}
+{Efficient long-context modeling using hierarchical attention, extending LLaMA-2 to 100K tokens with only 5.5\% additional parameters.\\[-1pt]
+\textbf{My Contributions:} participated in partial method design and paper revision.}
 
 \pubentry[0.82cm]{logos/arxiv-logo.png}
-{Watch, Remember, Reason: Human-View Video Understanding with MLLMs}
+{Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale}
 {2026}
-{\pubtag{arXiv 26} \quad \linkicon{https://arxiv.org/abs/2606.07433}{ArXiv} \quad \githubicon{https://github.com/marinero4972/Awesome-HumanView-VideoUnderstanding}{GitHub}}
-{Jiahao Meng, Yue Tan, \textbf{\underline{Qi Xu}}, Kuan Gao, Weisong Liu, Yanwei Li, Jason Li, Lingdong Kong, Haochen Wang, Qianyu Zhou, Jiangning Zhang, Guangliang Cheng, Yunhai Tong, Lu Qi, Minghsuan Yang}
-{Surveyed human-view video understanding with MLLMs through watching, remembering, and reasoning abilities for long, multimodal, and knowledge-intensive video scenarios.}
-
-\pubentry[1.42cm]{logos/NeurIPS_logo.png}
-{VideoZeroBench: Probing the Limits of Video MLLMs with Spatio-Temporal Evidence Verification}
-{2026}
-{\pubtag{NeurIPS Submission} \quad \linkicon{https://marinero4972.github.io/projects/VideoZeroBench/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.01569}{ArXiv} \quad \githubicon{https://github.com/marinero4972/VideoZeroBench}{Code}}
-{Jiahao Meng, Tan Yue, \textbf{\underline{Qi Xu}}, Haochen Wang, Zhongwei Ren, Weisong Liu, Yuhao Wang, Renrui Zhang, Yunhai Tong, Haodong Duan}
-{A hierarchical benchmark exposing the gap between surface-level answer correctness and genuine evidence-based reasoning in long-video understanding.}
+{\pubtag{arXiv 26} \quad \linkicon{https://wswdx.github.io/3DRAE}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.11331}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/3DRAE}{Code}}
+{Dongxu Wei*, \textbf{\underline{Qi Xu*}}, Zhiqi Li, Hangning Zhou, Cong Qiu, Hailong Qin, Mu Yang, Zhaopeng Cui, Peidong Liu}
+{First approach to perform 3D scene generation directly within an implicit 3D latent space using 3D Diffusion Transformers.\\[-1pt]
+\textbf{My Contributions:} completed large-scale dataset construction, ablation studies, evaluation, and contributed to paper writing and revision.}
 
 \pubentry[1.42cm]{logos/NeurIPS_logo.png}
 {E-MoFlow: Learning Egomotion and Optical Flow from Event Data via Implicit Regularization}
 {2025}
 {\pubtag{NeurIPS 25} \quad \linkicon{https://akawincent.github.io/EMoFlow/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2510.12753}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/E-MoFlow}{Code}}
 {Wenpu Li, Bangyan Liao, Yi Zhou, \textbf{\underline{Qi Xu}}, Pian Wan, Peidong Liu}
-{An unsupervised framework for joint ego-motion and optical flow estimation using implicit neural representations and differential geometric constraints.}
+{An unsupervised framework for joint ego-motion and optical flow estimation using implicit neural representations and differential geometric constraints.\\[-1pt]
+\textbf{My Contributions:} participated in partial method design and paper revision.}
 
-% --- ADVISEE PUBLICATIONS ---
-\section{PUBLICATIONS WITH ADVISED STUDENTS}
+% --- SUPERVISED PUBLICATIONS ---
+\section{SUPERVISED PUBLICATIONS}
 
 \pubentry{logos/eccv-logo.png}
 {SupIR-GS: Thermal Infrared Super-Resolution Novel View Synthesis with Imaging-Calibrated 3DGS}
 {2026}
 {\pubtag{ECCV 26} \quad \corrauthor}
 {Jin Liu, Haodong Li, Jiagang Chen, Dabin leng, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, \textbf{\underline{Qi Xu}}\corrmark, Zhiwen Zheng, Xingru Huang\corrmark}
-{Reconstructs high-resolution 3D thermal scenes from low-resolution inputs via physics-informed degradation modeling.}
+{Reconstructs high-resolution 3D thermal scenes from low-resolution inputs via physics-informed degradation modeling.\\[-1pt]
+\textbf{Supervision:} provided the core idea, guided method design and experiment planning, and led paper writing and revision.}
 
 \pubentry{logos/eccv-logo.png}
 {Physically Grounded Dual-Opacity Gaussian Splatting for Joint RGB-TIR Reconstruction}
 {2026}
 {\pubtag{ECCV 26} \quad \corrauthor}
 {Jin Liu, Dabin leng, Jiagang Chen, Haodong Li, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, Zhiwen Zheng, Xingru Huang\corrmark, \textbf{\underline{Qi Xu}}\corrmark}
-{A unified RGB-TIR reconstruction framework resolving cross-spectral visibility conflicts through thermal field modeling.}
+{A unified RGB-TIR reconstruction framework resolving cross-spectral visibility conflicts through thermal field modeling.\\[-1pt]
+\textbf{Supervision:} proposed the core idea, coordinated experiments and ablations, and led paper writing and revision.}
 
 % --- SKILLS ---
-\section{TECHNICAL SKILLS}
+\section{SKILLS}
 \begin{description}[leftmargin=0pt, font=\bfseries\color{primarycolor}, itemsep=0pt]
-    \item[Deep Learning:] PyTorch, Transformers, MLLMs, Diffusion Models, Reinforcement Learning
-    \item[Engineering:] Ray, Distributed Training (Multi-GPU/Cluster), Linux, Data Pipelines
-    \item[Research Interests:] Embodied AI, Multimodal Large Language Models, 3D Foundation Models
-    \item[Languages:] English (CET6), Mandarin (Native)
+    \item[Research:] MLLM research on video reasoning, spatio-temporal grounding, SFT/RL post-training, video agents, benchmark construction, and test-time scaling.
+    \item[Engineering:] Python, PyTorch, distributed training/evaluation, data construction pipelines, and large-scale experimental analysis; familiar with C++ and Linux development.
+    \item[Writing \& Leadership:] Leading research projects from problem formulation to implementation, benchmarking, analysis, paper writing, and public release.
 \end{description}
 
 \end{document}

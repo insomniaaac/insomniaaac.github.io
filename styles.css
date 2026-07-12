@@ -381,6 +381,20 @@ h3 {
   line-height: 1.52;
 }
 
+.experience-highlights {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 18px;
+  color: #4a5562;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.experience-highlights li::marker {
+  color: var(--accent);
+}
+
 .logo-frame {
   position: relative;
   z-index: 1;
@@ -456,6 +470,34 @@ time,
 .publication-list {
   display: grid;
   gap: 22px;
+}
+
+.paper-siu3r {
+  order: 1;
+}
+
+.paper-omtg {
+  order: 2;
+}
+
+.paper-videozero {
+  order: 3;
+}
+
+.paper-watch {
+  order: 4;
+}
+
+.paper-hici {
+  order: 5;
+}
+
+.paper-3drae {
+  order: 6;
+}
+
+.paper-emoflow {
+  order: 7;
 }
 
 .paper {
@@ -577,6 +619,25 @@ time,
 
 .paper-links {
   margin-top: 12px;
+}
+
+.contribution {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  color: #35414e;
+  background: linear-gradient(90deg, rgba(245, 239, 227, 0.72), rgba(245, 239, 227, 0.24));
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.9rem;
+  line-height: 1.48;
+}
+
+.contribution strong {
+  color: var(--accent);
+  font-family: "Avenir Next", "Optima", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
 }
 
 .two-column {
