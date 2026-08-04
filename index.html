@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Qi Xu is a PhD student at Westlake University working on multimodal large language models, video reasoning, spatio-temporal grounding, post-training, and 3D vision."
+      content="Qi Xu is a PhD researcher working toward spatially grounded world models for embodied agents, with research spanning 3D scene representations, long-horizon video reasoning, and multimodal post-training."
     >
-    <title>Qi Xu</title>
+    <title>Qi Xu — World Models &amp; Embodied Intelligence</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <link rel="stylesheet" href="styles.css">
@@ -16,6 +16,7 @@
     <header class="site-header">
       <a class="brand" href="#top">Qi Xu</a>
       <nav aria-label="Primary navigation">
+        <a href="#research">Research</a>
         <a href="#biography">Biography</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
@@ -25,20 +26,18 @@
     <main class="page" id="top">
       <section class="intro section">
         <div class="intro-copy">
-          <p class="eyebrow">PhD Student in Artificial Intelligence</p>
+          <p class="eyebrow">World Models · Spatial Intelligence · Embodied AI</p>
           <h1>Qi Xu <span class="native-name">徐淇</span></h1>
           <p class="lead">
-            I am a PhD student at Westlake University, advised by
-            <a href="https://ethliup.github.io/">Prof. Peidong Liu</a>. My research focuses on
-            <strong>multimodal large language models</strong>, especially video reasoning,
-            spatio-temporal grounding, and post-training.
+            I study how intelligent agents can <strong>build, predict, and act on
+            representations of the physical world</strong>.
           </p>
           <p>
-            I am interested in building grounded multimodal systems that can find and
-            verify visual evidence, reason over long videos, and understand the spatial
-            structure of physical environments. My earlier work spans 3D reconstruction
-            and scene understanding. I received my master&apos;s and bachelor&apos;s degrees
-            from Wuhan University.
+            I am a PhD student at Westlake University, advised by
+            <a href="https://ethliup.github.io/">Prof. Peidong Liu</a>. My work spans
+            3D scene reconstruction and generation, long-horizon video reasoning, and
+            multimodal post-training. I am building on these foundations toward
+            <strong>spatially grounded, action-aware world models for embodied agents</strong>.
           </p>
           <div class="link-row" aria-label="Profile links">
             <a href="mailto:insomniaaac@qq.com">Email</a>
@@ -63,7 +62,7 @@
             </div>
             <div>
               <dt>Research</dt>
-              <dd>Video MLLMs, Spatio-Temporal Grounding, 3D Vision</dd>
+              <dd>Spatial World Models, Embodied Intelligence, Multimodal Learning</dd>
             </div>
             <div>
               <dt>Location</dt>
@@ -176,22 +175,51 @@
         </div>
       </section>
 
-      <section class="section compact-section" aria-labelledby="research-title">
+      <section class="section research-section" id="research" aria-labelledby="research-title">
         <div class="section-title">
-          <h2 id="research-title">Research Interests</h2>
+          <p class="section-index">Research direction</p>
+          <h2 id="research-title">From perception to action</h2>
+          <p class="section-intro">
+            My research connects spatial perception and temporal reasoning to the larger
+            goal of learning predictive models that embodied agents can use to plan and act.
+          </p>
         </div>
-        <div class="interest-grid">
-          <article>
-            <h3>Multimodal Post-Training</h3>
-            <p>SFT and reinforcement learning for grounded multimodal reasoning, with verifiable task-specific rewards.</p>
+        <div class="research-trajectory" aria-label="Research trajectory from perception to embodied action">
+          <article class="trajectory-step foundation">
+            <div class="trajectory-marker" aria-hidden="true">01</div>
+            <div>
+              <p class="trajectory-status">Demonstrated foundation</p>
+              <h3>Perceive &amp; Ground</h3>
+              <p>Locate verifiable evidence across long visual observations and connect language to space and time.</p>
+              <p class="trajectory-evidence">OMTG · VideoZeroBench</p>
+            </div>
           </article>
-          <article>
-            <h3>Video Reasoning &amp; Grounding</h3>
-            <p>Long-video understanding, temporal localization, evidence verification, benchmark construction, and video agents.</p>
+          <article class="trajectory-step foundation">
+            <div class="trajectory-marker" aria-hidden="true">02</div>
+            <div>
+              <p class="trajectory-status">Demonstrated foundation</p>
+              <h3>Build Spatial State</h3>
+              <p>Learn compact 3D representations that unify scene geometry, semantics, reconstruction, and generation.</p>
+              <p class="trajectory-evidence">SIU3R · 3DRAE</p>
+            </div>
           </article>
-          <article>
-            <h3>3D &amp; Spatial Intelligence</h3>
-            <p>Scene reconstruction, understanding, generation, and spatial representations grounded in physical environments.</p>
+          <article class="trajectory-step direction">
+            <div class="trajectory-marker" aria-hidden="true">03</div>
+            <div>
+              <p class="trajectory-status">Current research direction</p>
+              <h3>Predict &amp; Simulate</h3>
+              <p>Model physical dynamics, long-horizon memory, and counterfactual futures conditioned on actions.</p>
+              <p class="trajectory-evidence">Action-conditioned world models</p>
+            </div>
+          </article>
+          <article class="trajectory-step direction">
+            <div class="trajectory-marker" aria-hidden="true">04</div>
+            <div>
+              <p class="trajectory-status">Long-term goal</p>
+              <h3>Plan &amp; Act</h3>
+              <p>Use learned world representations for planning, policy learning, and closed-loop embodied adaptation.</p>
+              <p class="trajectory-evidence">Generalist embodied agents</p>
+            </div>
           </article>
         </div>
       </section>
@@ -208,11 +236,12 @@
               <img src="assets/teasers/siu3r.png" alt="SIU3R teaser">
             </div>
             <div class="paper-body">
+              <p class="research-thread">Spatial state representation</p>
               <p class="venue">NeurIPS 2025 Spotlight</p>
               <h3>SIU3R: Simultaneous Scene Understanding and 3D Reconstruction Beyond Feature Alignment</h3>
               <p class="authors"><span class="me">Qi Xu*</span>, <a href="https://wswdx.github.io/">Dongxu Wei*</a>, <a href="https://lingzhezhao.github.io/">Lingzhe Zhao</a>, <a href="https://akawincent.github.io/">Wenpu Li</a>, Zhangchi Huang, <a href="https://gpcv.whu.edu.cn/">Shunping Ji</a>, <a href="https://ethliup.github.io/">Peidong Liu</a></p>
               <p>Alignment-free framework for state-of-the-art 3D reconstruction and scene understanding from unposed images via a shared pixel-aligned 3D representation.</p>
-              <p class="contribution"><strong>My contributions:</strong> Project lead, core idea contributor, and primary code implementer; led benchmarking, ablations, and paper writing.</p>
+              <p class="contribution"><strong>My contributions:</strong> Project lead and primary code implementer; co-developed the core method and led benchmarking, ablations, and paper writing.</p>
               <div class="paper-links">
                 <a href="https://insomniaaac.github.io/siu3r/">Project</a>
                 <a href="https://arxiv.org/abs/2507.02705">ArXiv</a>
@@ -226,11 +255,12 @@
               <img src="assets/teasers/omtg.png" alt="Towards One-to-Many Temporal Grounding teaser">
             </div>
             <div class="paper-body">
+              <p class="research-thread">Temporal reasoning &amp; post-training</p>
               <p class="venue">ICML 2026</p>
               <h3>Towards One-to-Many Temporal Grounding</h3>
               <p class="authors"><span class="me">Qi Xu*</span>, <a href="https://tangent0308.github.io/">Yue Tan*</a>, Shihao Chen, <a href="https://marinero4972.github.io/">Jiahao Meng</a>, <a href="https://sites.google.com/view/anranwang/home">Anran Wang</a>, <a href="https://gpcv.whu.edu.cn/">Shunping Ji</a>, <a href="https://haofei.vip/">Hao Fei</a>, <a href="https://lxtgh.github.io/">Xiangtai Li</a></p>
               <p>Introduces the first systematic solution for one-to-many temporal grounding with a 56K-sample dataset and SFT/RL training using temporal and CoT-based caption rewards.</p>
-              <p class="contribution"><strong>My contributions:</strong> Initiated the project and contributed the core idea; led data construction, SFT/RL pipelines, reward design, model training, benchmarking, and paper writing.</p>
+              <p class="contribution"><strong>My contributions:</strong> Co-initiated the project and co-developed the core idea; owned data construction, SFT/RL pipelines, reward design, model training, benchmarking, and paper writing.</p>
               <div class="paper-links">
                 <a href="https://insomniaaac.github.io/OMTG/">Project</a>
                 <a href="https://arxiv.org/abs/2606.06294">ArXiv</a>
@@ -245,11 +275,12 @@
               </video>
             </div>
             <div class="paper-body">
+              <p class="research-thread">Generative 3D representation</p>
               <p class="venue">arXiv 2026</p>
               <h3>Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale</h3>
               <p class="authors"><a href="https://wswdx.github.io/">Dongxu Wei*</a>, <span class="me">Qi Xu*</span>, <a href="https://lizhiqi49.github.io/">Zhiqi Li</a>, Hangning Zhou, Cong Qiu, Hailong Qin, Mu Yang, Zhaopeng Cui, <a href="https://ethliup.github.io/">Peidong Liu</a></p>
               <p>Performs 3D scene generation directly within an implicit 3D latent space using 3D Diffusion Transformers.</p>
-              <p class="contribution"><strong>My contributions:</strong> Built large-scale datasets, conducted ablations and evaluation, and contributed to paper writing and revision.</p>
+              <p class="contribution"><strong>My contributions:</strong> Co-designed the core method; implemented the training code and led model training; built the large-scale training dataset and led ablations and evaluation.</p>
               <div class="paper-links">
                 <a href="https://wswdx.github.io/3DRAE">Project</a>
                 <a href="https://arxiv.org/abs/2604.11331">ArXiv</a>
@@ -357,9 +388,9 @@
         </div>
         <div>
           <p>
-            I am open to research conversations and collaborations on embodied AI,
-            multimodal reasoning, 3D Vision, and vision-language systems that connect
-            perception with action.
+            I am open to research conversations and collaborations on spatial world
+            models, embodied intelligence, 3D scene representations, and multimodal
+            systems that connect perception with prediction and action.
           </p>
           <div class="contact-links">
             <a href="mailto:insomniaaac@qq.com">insomniaaac@qq.com</a>
@@ -372,7 +403,7 @@
 
     <footer class="footer">
       <span>Qi Xu</span>
-      <span>Last updated July 2026</span>
+      <span>Last updated August 2026</span>
     </footer>
   </body>
 </html>
