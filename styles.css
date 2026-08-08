@@ -778,6 +778,82 @@ time,
   gap: clamp(26px, 5vw, 70px);
 }
 
+.talk-section {
+  align-items: start;
+}
+
+.talk-feature {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(22px, 4vw, 42px);
+  min-width: 0;
+  padding: 18px;
+  overflow: hidden;
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.98), rgba(250, 246, 238, 0.94)),
+    var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.talk-cover {
+  display: block;
+  align-self: center;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--soft-line);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(33, 43, 54, 0.1);
+}
+
+.talk-cover img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.talk-cover:hover img {
+  transform: scale(1.018);
+}
+
+.talk-body {
+  align-self: center;
+  min-width: 0;
+  padding: 10px 8px 10px 0;
+}
+
+.talk-body h3 {
+  margin-bottom: 6px;
+  font-size: clamp(1.45rem, 2.5vw, 2.05rem);
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+}
+
+.talk-body > p:not(.venue) {
+  color: #3e4854;
+}
+
+.talk-subtitle {
+  margin-bottom: 15px;
+  color: var(--accent) !important;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.talk-host {
+  margin-bottom: 13px;
+  padding-top: 12px;
+  font-family: "Avenir Next", "Optima", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--soft-line);
+}
+
 .timeline {
   display: grid;
   gap: 18px;
@@ -843,6 +919,18 @@ time,
     max-width: 620px;
   }
 
+  .talk-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .talk-cover {
+    max-width: 680px;
+  }
+
+  .talk-body {
+    padding: 4px 4px 8px;
+  }
+
   .career-list {
     grid-template-columns: repeat(4, minmax(230px, 1fr));
     margin-right: -22px;
@@ -902,7 +990,9 @@ time,
   .news-list,
   .timeline,
   .compact-papers,
-  .research-trajectory {
+  .research-trajectory,
+  .talk-feature,
+  .talk-body {
     width: 100%;
     max-width: 100%;
   }
@@ -911,6 +1001,8 @@ time,
   .intro-copy p,
   .authors,
   .paper h3,
+  .talk-body h3,
+  .talk-body p,
   .compact-papers h3,
   .compact-papers p {
     overflow-wrap: anywhere;
