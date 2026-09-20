@@ -645,6 +645,36 @@ h3 {
   gap: 13px;
 }
 
+.experience-list {
+  display: grid;
+  gap: 28px;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 22px;
+}
+
+.experience-item h3 {
+  margin-top: 5px;
+}
+
+.experience-role {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.experience-item ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.experience-item li {
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+}
+
 .career-list {
   position: relative;
   display: grid;
@@ -795,34 +825,6 @@ time,
   gap: 22px;
 }
 
-.paper-siu3r {
-  order: 1;
-}
-
-.paper-omtg {
-  order: 3;
-}
-
-.paper-videozero {
-  order: 4;
-}
-
-.paper-watch {
-  order: 5;
-}
-
-.paper-hici {
-  order: 6;
-}
-
-.paper-3drae {
-  order: 2;
-}
-
-.paper-emoflow {
-  order: 7;
-}
-
 .paper {
   display: grid;
   grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
@@ -836,6 +838,10 @@ time,
 .paper:last-child {
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+.paper-text-only {
+  grid-template-columns: 1fr;
 }
 
 .paper-thumb {
@@ -947,9 +953,15 @@ time,
 
 .paper-tag-award {
   color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
+  background: #a44814;
+  border-color: #a44814;
   box-shadow: 0 3px 10px rgba(169, 71, 47, 0.16);
+}
+
+.paper-tag-corresponding {
+  color: #fff;
+  background: #663c8c;
+  border-color: #663c8c;
 }
 
 .venue {
@@ -1202,6 +1214,11 @@ time,
 }
 
 @media (max-width: 640px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
   .site-header,
   .page,
   .footer {

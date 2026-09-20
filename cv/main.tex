@@ -40,6 +40,9 @@
 \definecolor{secondarycolor}{RGB}{91, 99, 110}
 \definecolor{rulecolor}{RGB}{192, 208, 221}
 \definecolor{tagbg}{RGB}{235, 244, 249}
+\definecolor{spotlightcolor}{RGB}{164, 72, 20}
+\definecolor{corrauthorcolor}{RGB}{102, 60, 140}
+\definecolor{cofirstcolor}{RGB}{0, 112, 105}
 \definecolor{bodytext}{RGB}{23, 30, 38}
 \colorlet{PRIMARYCOLOR}{primarycolor}
 \colorlet{SECONDARYCOLOR}{secondarycolor}
@@ -69,10 +72,10 @@
 \newcommand{\pubtag}[1]{%
     {\setlength{\fboxsep}{1.3pt}\colorbox{tagbg}{\textsf{\scriptsize\bfseries\color{primarycolor}#1}}}%
 }
-\newcommand{\firstauthor}{\pubtag{First Author}}
-\newcommand{\cofirst}{\pubtag{Co-First Author}}
-\newcommand{\spotlight}{\pubtag{Spotlight}}
-\newcommand{\corrauthor}{\pubtag{Corresponding Author}}
+\newcommand{\firstauthor}{{\setlength{\fboxsep}{1.3pt}\colorbox{primarycolor}{\textsf{\scriptsize\bfseries\color{white}First Author}}}}
+\newcommand{\cofirst}{{\setlength{\fboxsep}{1.3pt}\colorbox{cofirstcolor}{\textsf{\scriptsize\bfseries\color{white}Co-First Author}}}}
+\newcommand{\spotlight}{{\setlength{\fboxsep}{1.3pt}\colorbox{spotlightcolor}{\textsf{\scriptsize\bfseries\color{white}Spotlight}}}}
+\newcommand{\corrauthor}{{\setlength{\fboxsep}{1.3pt}\colorbox{corrauthorcolor}{\textsf{\scriptsize\bfseries\color{white}Corresponding Author}}}}
 
 \newcommand{\contactlink}[2]{\href{#1}{\color{primarycolor}#2}}
 \newcommand{\linkicon}[2]{\href{#1}{\small\color{accentcolor}\faLink\ \textsf{#2}}}
@@ -175,7 +178,7 @@
 % --- HEADER ---
 \begin{center}
     {\fontsize{28}{31}\selectfont\bfseries\color{primarycolor}Qi Xu}\\[-1pt]
-    {\small\textsf{\color{secondarycolor}Spatial World Models \textbullet\ Embodied Intelligence \textbullet\ Multimodal Learning}}\\[5pt]
+    {\small\textsf{\color{secondarycolor}Multimodal Large Language Models \textbullet\ Video Understanding \textbullet\ Multimodal Post-Training}}\\[5pt]
     \small
     \faEnvelope\ \contactlink{mailto:insomniaaac@qq.com}{insomniaaac@qq.com}\quad
     \faPhone\ +86-15527361765\quad
@@ -187,100 +190,78 @@
 
 % --- EDUCATION ---
 \section{EDUCATION}
-\educationentry{logos/westlake-logo.png}{Westlake University}{2026 -- Present}{PhD Student in Artificial Intelligence}{Supervised by \contactlink{https://ethliup.github.io/}{Peidong Liu}; Research: Spatial Intelligence, Embodied AI, Multimodal Learning}
-\educationentry{logos/whu-logo.png}{Wuhan University}{2023 -- 2026}{Master in Pattern Recognition and Intelligent Systems}{Research: Computer Vision, 3D Reconstruction, Multimodal Learning}
+\educationentry{logos/westlake-logo.png}{Westlake University}{2026 -- Present}{PhD Student in Artificial Intelligence}{Co-supervised by \contactlink{https://ethliup.github.io/}{Peidong Liu} and \contactlink{https://icoz69.github.io/}{Chi Zhang}\\[-1pt]Research: Multimodal Learning, Spatial Intelligence, Embodied AI}
+\educationentry{logos/whu-logo.png}{Wuhan University}{2023 -- 2026}{Master in Pattern Recognition and Intelligent Systems}{Research: Multimodal Learning, Computer Vision, 3D Reconstruction}
 \educationentry{logos/whu-logo.png}{Wuhan University}{2019 -- 2023}{B.S. in Spatial Information and Digital Technology}{}
 
 % --- RESEARCH PROFILE ---
 \section{RESEARCH PROFILE}
-I study how intelligent agents \textbf{build, predict, and act on representations of the physical world}. My work spans 3D scene reconstruction and generation, long-horizon video reasoning, and multimodal post-training, building toward spatially grounded, action-aware world models for embodied agents.
+My research focuses on \textbf{multimodal large language models for video understanding and spatio-temporal reasoning}. I work on multimodal data construction, SFT/RL post-training, and evidence-grounded evaluation, with applications in temporal grounding and embodied captioning. My broader interests include connecting vision, language, and 3D scene representations to improve spatial understanding and reasoning about the physical world.
 
 % --- EXPERIENCE ---
 \section{EXPERIENCE}
-\experienceentry{logos/bytedance-color.png}{Bytedance AML}{Aug 2026 -- Present}{Research Intern at AML-Doubao Team}{}
-\experienceentry{logos/bytedance-color.png}{ByteDance, TikTok Global Live LLM Strategy Department}{2025 -- 2026}{Research Intern; Mentored by \contactlink{https://lxtgh.github.io/}{Xiangtai Li}}{
-    \item Co-developed \textbf{video MLLMs for temporal grounding}, with ownership of SFT/RL post-training pipelines, reward design, and evaluation.
-    \item Built scalable data and annotation pipelines for high-quality, temporally grounded multimodal training data.
-    \item Scaled distributed training and evaluation to \textbf{hundreds of GPUs}; analyzed training stability and model convergence.
-    \item Designed agentic workflows leveraging LLMs to automate real-time interaction analysis and optimize content distribution within the TikTok Live ecosystem.
+\experienceentry{logos/bytedance-color.png}{ByteDance, Data-AML-Doubao}{Aug 2026 -- Present}{Research Intern; Mentored by Ke Wang and \contactlink{https://scholar.google.com/citations?user=tQ7-4r0AAAAJ&hl=zh-CN}{Xiongcai Luo}}{
+    \item Designed and scaled \textbf{synthetic data pipelines} for the \textbf{embodied captioning} and \textbf{Doubao automotive} projects.
+    \item Contributed to \textbf{Doubao-Seed-Embodied-Caption} model training.
+}
+\experienceentry{logos/bytedance-color.png}{ByteDance, TikTok Global Live}{Sep 2025 -- Mar 2026}{Research Intern, LLM Strategy; Mentored by \contactlink{https://lxtgh.github.io/}{Xiangtai Li}}{
+    \item Co-developed \textbf{video MLLMs for temporal grounding}, focusing on \textbf{SFT/RL post-training}, reward design, and evaluation.
+    \item Built \textbf{multimodal training data and annotation pipelines} for temporally grounded video understanding.
 }
 
 % --- SELECTED PUBLICATIONS ---
 \section{SELECTED PUBLICATIONS}
+{\scriptsize\color{secondarycolor}First Author: first-listed author. * Equal contribution. \ensuremath{\dagger} Corresponding author.\par}
 
 \pubentry[1.42cm]{logos/NeurIPS_logo.png}
 {SIU3R: Simultaneous Scene Understanding and 3D Reconstruction Beyond Feature Alignment}
 {2025}
-{\pubtag{NeurIPS 2025 Spotlight} \quad \pubtag{160+ GitHub Stars} \quad \pubtag{10+ Citations} \quad \linkicon{https://insomniaaac.github.io/siu3r/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2507.02705}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/SIU3R}{Code}}
+{\pubtag{NeurIPS 2025} \quad \firstauthor \quad \spotlight \quad \pubtag{160+ GitHub Stars} \quad \pubtag{10+ Citations} \\[2pt] \linkicon{https://insomniaaac.github.io/siu3r/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2507.02705}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/SIU3R}{Code}}
 {\textbf{\underline{Qi Xu*}}, Dongxu Wei*, Lingzhe Zhao, Wenpu Li, Zhangchi Huang, Shunping Ji, Peidong Liu}
-{Introduced a shared pixel-aligned 3D representation for simultaneous reconstruction and scene understanding from unposed images, providing a unified spatial state for geometry and semantics.\\[-1pt]
-\textbf{My Contributions:} Project lead and primary code implementer; co-developed the core method and led benchmarking, ablation analysis, and paper writing.}
-
-\pubentry[0.82cm]{logos/arxiv-logo.png}
-{Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale}
-{2026}
-{\pubtag{arXiv 2026} \quad \linkicon{https://wswdx.github.io/3DRAE}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.11331}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/3DRAE}{Code}}
-{Dongxu Wei*, \textbf{\underline{Qi Xu*}}, Zhiqi Li, Hangning Zhou, Cong Qiu, Hailong Qin, Mu Yang, Zhaopeng Cui, Peidong Liu}
-{Introduced a compact 1K-token implicit 3D latent representation and 3D Diffusion Transformer for scalable scene generation.\\[-1pt]
-\textbf{My Contributions:} Co-designed the core method; implemented the training code and led model training; built the large-scale training dataset and led ablations and evaluation.}
+{Introduced a shared pixel-aligned 3D representation for simultaneous reconstruction and scene understanding from unposed images, providing a unified spatial state for geometry and semantics.}
 
 \pubentry{logos/ICML-logo.png}
 {Towards One-to-Many Temporal Grounding}
 {2026}
-{\pubtag{ICML 2026} \quad \linkicon{https://insomniaaac.github.io/OMTG/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2606.06294}{ArXiv}}
+{\pubtag{ICML 2026} \quad \firstauthor \quad \linkicon{https://insomniaaac.github.io/OMTG/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2606.06294}{ArXiv}}
 {\textbf{\underline{Qi Xu*}}, Yue Tan*, Shihao Chen, Jiahao Meng, Anran Wang, Shunping Ji, Hao Fei, Xiangtai Li}
-{Introduced the first systematic solution for OMTG, featuring a 56k-sample dataset and RL training with CoT-based rewards; outperformed Gemini 2.5 Pro by 15.85\%.\\[-1pt]
-\textbf{My Contributions:} Co-initiated the project and co-developed the core idea; owned data construction, SFT/RL pipelines, reward design, model training, benchmarking, and paper writing.}
-
-\newpage
-\section{ADDITIONAL PUBLICATIONS}
+{Introduced the first systematic solution for OMTG, featuring a 56k-sample dataset and RL training with CoT-based rewards; outperformed Gemini 2.5 Pro by 15.85\%.}
 
 \pubentry[0.82cm]{logos/arxiv-logo.png}
 {VideoZeroBench: Probing the Limits of Video MLLMs with Spatio-Temporal Evidence Verification}
 {2026}
 {\pubtag{arXiv 2026} \quad \linkicon{https://marinero4972.github.io/projects/VideoZeroBench/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.01569}{ArXiv} \quad \githubicon{https://github.com/marinero4972/VideoZeroBench}{Code}}
 {Jiahao Meng, Tan Yue, \textbf{\underline{Qi Xu}}, Haochen Wang, Zhongwei Ren, Weisong Liu, Yuhao Wang, Renrui Zhang, Yunhai Tong, Haodong Duan}
-{A hierarchical long-video QA benchmark that verifies model answers with temporal intervals and spatial boxes under a five-level evidence protocol.\\[-1pt]
-\textbf{My Contributions:} Co-designed the five-level spatio-temporal evidence evaluation protocol; designed and implemented the annotation tool and guidelines; constructed approximately 200 complete QA-evidence samples.}
+{A hierarchical long-video QA benchmark that verifies model answers with temporal intervals and spatial boxes under a five-level evidence protocol.}
+
+\newpage
+\section{SELECTED PUBLICATIONS (CONTINUED)}
 
 \pubentry[0.82cm]{logos/arxiv-logo.png}
 {Watch, Remember, Reason: Human-View Video Understanding with MLLMs}
 {2026}
 {\pubtag{arXiv 2026} \quad \linkicon{https://arxiv.org/abs/2606.07433}{ArXiv} \quad \githubicon{https://github.com/marinero4972/Awesome-HumanView-VideoUnderstanding}{GitHub}}
 {Jiahao Meng, Yue Tan, \textbf{\underline{Qi Xu}}, Kuan Gao, Weisong Liu, Yanwei Li, Xiangtai Li, Lingdong Kong, Haochen Wang, Qianyu Zhou, Jiangning Zhang, Guangliang Cheng, Yunhai Tong, Lu Qi, Minghsuan Yang}
-{Surveyed human-view video understanding with MLLMs through watching, remembering, and reasoning abilities for long, multimodal, and knowledge-intensive video scenarios.\\[-1pt]
-\textbf{My Contributions:} organized literature for the Memory section, created figures and tables, and contributed to paper writing and revision.}
+{Surveyed human-view video understanding with MLLMs through watching, remembering, and reasoning abilities for long, multimodal, and knowledge-intensive video scenarios.}
 
 \pubentry{logos/ICML-logo.png}
 {HiCI: Hierarchical Construction--Integration for Long-Context Attention}
 {2026}
 {\pubtag{ICML 2026} \quad \linkicon{https://arxiv.org/abs/2603.20843}{ArXiv} \quad \githubicon{https://github.com/zengxyyu/HiCI}{Code}}
 {Xiangyu Zeng, \textbf{\underline{Qi Xu}}, Yunke Wang, Chang Xu}
-{Efficient long-context modeling using hierarchical attention, extending LLaMA-2 to 100K tokens with only 5.5\% additional parameters.\\[-1pt]
-\textbf{My Contributions:} participated in partial method design and paper revision.}
+{Efficient long-context modeling using hierarchical attention, extending LLaMA-2 to 100K tokens with only 5.5\% additional parameters.}
 
-\pubentry[1.42cm]{logos/NeurIPS_logo.png}
-{E-MoFlow: Learning Egomotion and Optical Flow from Event Data via Implicit Regularization}
-{2025}
-{\pubtag{NeurIPS 2025} \quad \linkicon{https://akawincent.github.io/EMoFlow/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2510.12753}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/E-MoFlow}{Code}}
-{Wenpu Li, Bangyan Liao, Yi Zhou, \textbf{\underline{Qi Xu}}, Pian Wan, Peidong Liu}
-{An unsupervised framework for joint ego-motion and optical flow estimation using implicit neural representations and differential geometric constraints.\\[-1pt]
-\textbf{My Contributions:} participated in partial method design and paper revision.}
-
-% --- INVITED TALKS ---
-\section{INVITED TALKS}
-\entrytitle{Post-Training of Multimodal Large Language Models}\hfill\entrydate{Aug 6, 2026}\\[-1pt]
-\entrysubtitle{Invited Talk, Hangzhou Dianzi University}\\[-1pt]
-{\small\textit{Data, Optimization and Evaluation} \quad \linkicon{https://insomniaaac.github.io/assets/talks/mllm-posttraining-hdu.pdf}{Slides}}
-\vspace{0.04cm}
-
-% --- RESEARCH MENTORSHIP ---
-\section{RESEARCH MENTORSHIP}
+\pubentry[0.82cm]{logos/arxiv-logo.png}
+{Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale}
+{2026}
+{\pubtag{arXiv 2026} \quad \cofirst \quad \linkicon{https://wswdx.github.io/3DRAE}{Project Page} \quad \linkicon{https://arxiv.org/abs/2604.11331}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/3DRAE}{Code}}
+{Dongxu Wei*, \textbf{\underline{Qi Xu*}}, Zhiqi Li, Hangning Zhou, Cong Qiu, Hailong Qin, Mu Yang, Zhaopeng Cui, Peidong Liu}
+{Introduced a compact 1K-token implicit 3D latent representation and 3D Diffusion Transformer for scalable scene generation.}
 
 \pubentry{logos/eccv-logo.png}
-{SupIR-GS: Thermal Infrared Super-Resolution Novel View Synthesis with Imaging-Calibrated 3DGS}
+{SupIR-GS: Thermal Infrared Super-Resolution Novel View Synthesis with Imaging-Calibrated 3D Gaussian Splatting}
 {2026}
-{\pubtag{ECCV 2026} \quad \corrauthor}
+{\pubtag{ECCV 2026} \quad \corrauthor \quad \linkicon{https://eccv.ecva.net/virtual/2026/poster/5680}{ECCV}}
 {Jin Liu, Haodong Li, Jiagang Chen, Dabin leng, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, \textbf{\underline{Qi Xu}}\corrmark, Zhiwen Zheng, Xingru Huang\corrmark}
 {Reconstructs high-resolution 3D thermal scenes from low-resolution inputs via physics-informed degradation modeling.\\[-1pt]
 \textbf{Mentorship:} Provided the core idea, guided method design and experiment planning, and led paper writing and revision.}
@@ -288,17 +269,24 @@ I study how intelligent agents \textbf{build, predict, and act on representation
 \pubentry{logos/eccv-logo.png}
 {Physically Grounded Dual-Opacity Gaussian Splatting for Joint RGB-TIR Reconstruction}
 {2026}
-{\pubtag{ECCV 2026} \quad \corrauthor}
+{\pubtag{ECCV 2026} \quad \corrauthor \quad \linkicon{https://eccv.ecva.net/virtual/2026/poster/5920}{ECCV}}
 {Jin Liu, Dabin leng, Jiagang Chen, Haodong Li, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, Zhiwen Zheng, Xingru Huang\corrmark, \textbf{\underline{Qi Xu}}\corrmark}
 {A unified RGB-TIR reconstruction framework resolving cross-spectral visibility conflicts through thermal field modeling.\\[-1pt]
 \textbf{Mentorship:} Proposed the core idea, coordinated experiments and ablations, and led paper writing and revision.}
 
+\pubentry[1.42cm]{logos/NeurIPS_logo.png}
+{E-MoFlow: Learning Egomotion and Optical Flow from Event Data via Implicit Regularization}
+{2025}
+{\pubtag{NeurIPS 2025} \quad \linkicon{https://akawincent.github.io/EMoFlow/}{Project Page} \quad \linkicon{https://arxiv.org/abs/2510.12753}{ArXiv} \quad \githubicon{https://github.com/WU-CVGL/E-MoFlow}{Code}}
+{Wenpu Li, Bangyan Liao, Yi Zhou, \textbf{\underline{Qi Xu}}, Pian Wan, Peidong Liu}
+{An unsupervised framework for joint ego-motion and optical flow estimation using implicit neural representations and differential geometric constraints.}
+
 % --- SKILLS ---
 \section{SKILLS}
 \begin{description}[leftmargin=0pt, font=\bfseries\color{primarycolor}, itemsep=0pt]
-    \item[Research:] 3D reconstruction and generation, video reasoning, spatio-temporal grounding, multimodal SFT/RL post-training, benchmark construction, and test-time scaling.
-    \item[Direction:] Action-conditioned world models, physical reasoning, planning, and learning for embodied agents.
-    \item[Engineering:] Python, PyTorch, distributed training/evaluation, data construction pipelines, and large-scale experimental analysis; familiar with C++ and Linux development.
+    \item[Research:] Multimodal SFT/RL post-training, video understanding, spatio-temporal grounding, synthetic data construction, and evidence-grounded evaluation.
+    \item[Direction:] Long-context multimodal reasoning, spatially grounded MLLMs, and embodied scene understanding.
+    \item[Engineering:] Python, PyTorch, distributed training/evaluation, synthetic data and annotation pipelines, and large-scale experimental analysis; familiar with C++ and Linux development.
     \item[Writing \& Leadership:] Leading research projects from problem formulation to implementation, benchmarking, analysis, paper writing, and public release.
 \end{description}
 

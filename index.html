@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Qi Xu studies grounded representations and reasoning for spatial world models and embodied interaction."
+      content="Qi Xu studies multimodal large language models for video understanding, spatio-temporal reasoning, and multimodal post-training."
     >
     <title>Qi Xu</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -17,10 +17,9 @@
     <header class="site-header">
       <a class="brand" href="#top">Qi Xu</a>
       <nav aria-label="Primary navigation">
+        <a href="#biography">Experience</a>
         <a href="#research">Research</a>
-        <a href="#biography">Biography</a>
         <a href="#publications">Publications</a>
-        <a href="#talks">Talks</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -30,16 +29,15 @@
         <div class="intro-copy">
           <h1>Qi Xu <span class="native-name">徐淇</span></h1>
           <p class="lead">
-            I study how intelligent agents can <strong>form grounded representations
-            of the physical world, reason about how it evolves, and use that
-            understanding to act</strong>.
+            My research focuses on <strong>multimodal large language models for
+            video understanding and spatio-temporal reasoning</strong>.
           </p>
           <p>
             I am a PhD student at Westlake University, advised by
-            <a href="https://ethliup.github.io/">Prof. Peidong Liu</a>. My research
-            connects 3D scene modeling, long-horizon video understanding, and
-            multimodal post-training—building the perceptual and reasoning foundations
-            for <strong>spatial world models that support embodied interaction</strong>.
+            <a href="https://ethliup.github.io/">Peidong Liu</a>. I work on multimodal
+            data construction, <strong>SFT/RL post-training</strong>, and
+            evidence-grounded evaluation, with applications in temporal grounding
+            and embodied captioning.
           </p>
           <div class="link-row" aria-label="Profile links">
             <a href="mailto:insomniaaac@qq.com">Email</a>
@@ -56,22 +54,42 @@
 
       <section class="section compact-section" id="biography" aria-labelledby="biography-title">
         <div class="section-title">
-          <h2 id="biography-title">Education &amp; Experience</h2>
+          <h2 id="biography-title">Research Experience</h2>
         </div>
-        <div class="career-list">
-          <article class="career-card active">
+        <div class="experience-list">
+          <article class="experience-item">
             <div class="logo-frame logo-frame-wide">
               <img src="assets/logos/bytedance-color.png" alt="ByteDance logo">
             </div>
-            <div class="career-meta">
-              <time datetime="2026-08">Aug 2026 - Present</time>
-            </div>
             <div>
-              <h3>Bytedance AML</h3>
-              <p class="career-role">Research Intern at AML-Doubao Team</p>
+              <time datetime="2026-08">Aug 2026 - Present</time>
+              <h3>ByteDance, Data-AML-Doubao</h3>
+              <p class="experience-role">Research Intern · Mentored by Ke Wang and <a href="https://scholar.google.com/citations?user=tQ7-4r0AAAAJ&amp;hl=zh-CN">Xiongcai Luo</a></p>
+              <ul>
+                <li>Designed and scaled <strong>synthetic data pipelines</strong> for the <strong>embodied captioning</strong> and <strong>Doubao automotive</strong> projects.</li>
+                <li>Contributed to <strong>Doubao-Seed-Embodied-Caption</strong> model training.</li>
+              </ul>
             </div>
           </article>
-
+          <article class="experience-item">
+            <div class="logo-frame logo-frame-wide">
+              <img src="assets/logos/tiktok.png" alt="TikTok logo">
+            </div>
+            <div>
+              <time>Sep 2025 - Mar 2026</time>
+              <h3>ByteDance, TikTok Global Live</h3>
+              <p class="experience-role">Research Intern, LLM Strategy · Mentored by <a href="https://lxtgh.github.io/">Xiangtai Li</a></p>
+              <ul>
+                <li>Co-developed <strong>video MLLMs for temporal grounding</strong>, focusing on <strong>SFT/RL post-training</strong>, reward design, and evaluation.</li>
+                <li>Built <strong>multimodal training data and annotation pipelines</strong> for temporally grounded video understanding.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="section-title">
+          <h2>Education</h2>
+        </div>
+        <div class="career-list">
           <article class="career-card active">
             <div class="logo-frame">
               <img src="assets/logos/westlake-logo.png" alt="Westlake University logo">
@@ -81,22 +99,8 @@
             </div>
             <div>
               <h3>Westlake University</h3>
-              <p class="career-role">PhD Student</p>
-              <p class="career-mentor">Advisor: <a href="https://ethliup.github.io/">Prof. Peidong Liu</a></p>
-            </div>
-          </article>
-
-          <article class="career-card inactive">
-            <div class="logo-frame logo-frame-wide">
-              <img src="assets/logos/tiktok.png" alt="TikTok logo">
-            </div>
-            <div class="career-meta">
-              <time>Sep 2025 - Mar 2026</time>
-            </div>
-            <div>
-              <h3>ByteDance TikTok</h3>
-              <p class="career-role">Research Intern at TikTok Global Live</p>
-              <p class="career-mentor">Mentor: <a href="https://lxtgh.github.io/">Xiangtai Li</a></p>
+              <p class="career-role">PhD Student in Artificial Intelligence</p>
+              <p class="career-mentor">Advisor: <a href="https://ethliup.github.io/">Peidong Liu</a></p>
             </div>
           </article>
 
@@ -109,7 +113,7 @@
             </div>
             <div>
               <h3>Wuhan University</h3>
-              <p class="career-role">Master's Degree</p>
+              <p class="career-role">Master in Pattern Recognition and Intelligent Systems</p>
               <p class="career-mentor">Advisor: <a href="https://gpcv.whu.edu.cn/">Prof. Shunping Ji</a></p>
             </div>
           </article>
@@ -123,7 +127,7 @@
             </div>
             <div>
               <h3>Wuhan University</h3>
-              <p class="career-role">Bachelor's Degree</p>
+              <p class="career-role">B.S. in Spatial Information and Digital Technology</p>
             </div>
           </article>
         </div>
@@ -133,17 +137,17 @@
         <div class="research-heading">
           <p class="section-index">Research direction</p>
           <h2 id="research-title">
-            <span>Perceive.</span>
             <span>Understand.</span>
-            <span>Interact.</span>
+            <span>Reason.</span>
+            <span>Learn.</span>
           </h2>
           <p class="research-thesis">
-            My research aims to enable intelligent systems to understand, reason about,
-            and interact with the physical world.
+            Connecting vision, language, and 3D scene representations to improve
+            spatial understanding and reasoning about the physical world.
           </p>
         </div>
 
-        <div class="research-continuum" aria-label="Research direction from perception through understanding to interaction">
+        <div class="research-continuum" aria-label="Multimodal research: video understanding, spatial reasoning, and post-training">
           <div class="research-stages">
             <article class="research-stage stage-perception">
               <div class="world-symbol" aria-hidden="true">
@@ -159,8 +163,8 @@
               </div>
               <div class="stage-copy">
                 <p class="stage-kicker">Observe</p>
-                <h3>Perception</h3>
-                <p>Sensing structure, motion, and change.</p>
+                <h3>Video Understanding</h3>
+                <p>Temporal grounding and embodied captioning.</p>
               </div>
             </article>
 
@@ -181,8 +185,8 @@
               </div>
               <div class="stage-copy">
                 <p class="stage-kicker">Interpret</p>
-                <h3>Understanding</h3>
-                <p>Forming grounded models of how the world works.</p>
+                <h3>Spatial Reasoning</h3>
+                <p>Connecting visual evidence, language, and 3D scene representations.</p>
               </div>
             </article>
 
@@ -197,9 +201,9 @@
                 </svg>
               </div>
               <div class="stage-copy">
-                <p class="stage-kicker">Engage</p>
-                <h3>Interaction</h3>
-                <p>Acting, observing feedback, and adapting.</p>
+                <p class="stage-kicker">Learn</p>
+                <h3>Multimodal Post-Training</h3>
+                <p>Data construction, SFT/RL, and evidence-grounded evaluation.</p>
               </div>
             </article>
           </div>
@@ -212,10 +216,6 @@
           <h2 id="news-title">News</h2>
         </div>
         <div class="news-list">
-          <article>
-            <time datetime="2026-08-06">Aug 2026</time>
-            <p>Gave an invited talk on <strong>post-training multimodal large language models</strong> at Hangzhou Dianzi University.</p>
-          </article>
           <article>
             <time>2026</time>
             <p><strong>VideoZeroBench</strong> was released with code and data for evidence-grounded long-video evaluation.</p>
@@ -250,7 +250,7 @@
       <section class="section" id="publications" aria-labelledby="publications-title">
         <div class="section-title with-note">
           <h2 id="publications-title">Selected Publications</h2>
-          <p><span class="me">Qi Xu</span> is underlined. * denotes equal contribution.</p>
+          <p><span class="me">Qi Xu</span> is underlined. * Equal contribution. † Corresponding author.</p>
         </div>
 
         <div class="publication-list">
@@ -294,43 +294,22 @@
             </div>
           </article>
 
-          <article class="paper paper-3drae">
+          <article class="paper paper-videozero">
             <div class="paper-thumb media-thumb">
-              <video autoplay muted loop playsinline preload="metadata" aria-label="3DRAE teaser">
-                <source src="assets/teasers/3drae.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="paper-body">
-              <div class="paper-tags" aria-label="Research topic and publication venue">
-                <span class="paper-tag paper-tag-topic">Perception</span>
-                <span class="paper-tag paper-tag-venue">arXiv 2026</span>
-              </div>
-              <h3>Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale</h3>
-              <p class="authors"><a href="https://wswdx.github.io/">Dongxu Wei*</a>, <span class="me">Qi Xu*</span>, <a href="https://lizhiqi49.github.io/">Zhiqi Li</a>, Hangning Zhou, Cong Qiu, Hailong Qin, Mu Yang, Zhaopeng Cui, <a href="https://ethliup.github.io/">Peidong Liu</a></p>
-              <p>Performs 3D scene generation directly within an implicit 3D latent space using 3D Diffusion Transformers.</p>
-              <div class="paper-links">
-                <a href="https://wswdx.github.io/3DRAE">Project</a>
-                <a href="https://arxiv.org/abs/2604.11331">ArXiv</a>
-                <a href="https://github.com/WU-CVGL/3DRAE">Code</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="paper paper-hici">
-            <div class="paper-thumb media-thumb">
-              <img src="assets/teasers/hici.png" alt="HiCI teaser">
+              <img src="assets/teasers/videozerobench.png" alt="VideoZeroBench teaser">
             </div>
             <div class="paper-body">
               <div class="paper-tags" aria-label="Research topic and publication venue">
                 <span class="paper-tag paper-tag-topic">Understanding</span>
-                <span class="paper-tag paper-tag-venue">ICML 2026</span>
+                <span class="paper-tag paper-tag-venue">arXiv 2026</span>
               </div>
-              <h3>HiCI: Hierarchical Construction-Integration for Long-Context Attention</h3>
-              <p class="authors"><a href="https://zengxyyu.github.io/">Xiangyu Zeng</a>, <span class="me">Qi Xu</span>, <a href="https://yunke-wang.github.io/">Yunke Wang</a>, <a href="http://changxu.xyz/">Chang Xu</a></p>
-              <p>Efficient long-context modeling with hierarchical attention, extending LLaMA-2 to 100K tokens with only 5.5% additional parameters.</p>
+              <h3>VideoZeroBench: Probing the Limits of Video MLLMs with Spatio-Temporal Evidence Verification</h3>
+              <p class="authors"><a href="https://marinero4972.github.io/">Jiahao Meng</a>, <a href="https://tangent0308.github.io/">Yue Tan</a>, <span class="me">Qi Xu</span>, <a href="https://haochen-wang409.github.io/">Haochen Wang</a>, <a href="https://maverickren.github.io/MyProfile.github.io/">Zhongwei Ren</a>, <a href="https://scholar.google.com.hk/citations?user=a20rvfAAAAAJ">Weisong Liu</a>, Yuhao Wang, <a href="https://zrrskywalker.github.io/">Renrui Zhang</a>, <a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ">Yunhai Tong</a>, <a href="https://kennymckormick.github.io/">Haodong Duan</a></p>
+              <p>A hierarchical long-video QA benchmark that verifies answers with temporal intervals and spatial boxes under a five-level evidence protocol.</p>
               <div class="paper-links">
-                <a href="https://arxiv.org/abs/2603.20843">ArXiv</a>
-                <a href="https://github.com/zengxyyu/HiCI">Code</a>
+                <a href="https://marinero4972.github.io/projects/VideoZeroBench/">Project</a>
+                <a href="https://arxiv.org/abs/2604.01569">ArXiv</a>
+                <a href="https://github.com/marinero4972/VideoZeroBench">Code</a>
               </div>
             </div>
           </article>
@@ -354,22 +333,73 @@
             </div>
           </article>
 
-          <article class="paper paper-videozero">
+          <article class="paper paper-hici">
             <div class="paper-thumb media-thumb">
-              <img src="assets/teasers/videozerobench.png" alt="VideoZeroBench teaser">
+              <img src="assets/teasers/hici.png" alt="HiCI teaser">
             </div>
             <div class="paper-body">
               <div class="paper-tags" aria-label="Research topic and publication venue">
                 <span class="paper-tag paper-tag-topic">Understanding</span>
+                <span class="paper-tag paper-tag-venue">ICML 2026</span>
+              </div>
+              <h3>HiCI: Hierarchical Construction-Integration for Long-Context Attention</h3>
+              <p class="authors"><a href="https://zengxyyu.github.io/">Xiangyu Zeng</a>, <span class="me">Qi Xu</span>, <a href="https://yunke-wang.github.io/">Yunke Wang</a>, <a href="http://changxu.xyz/">Chang Xu</a></p>
+              <p>Efficient long-context modeling with hierarchical attention, extending LLaMA-2 to 100K tokens with only 5.5% additional parameters.</p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2603.20843">ArXiv</a>
+                <a href="https://github.com/zengxyyu/HiCI">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper paper-3drae">
+            <div class="paper-thumb media-thumb">
+              <video autoplay muted loop playsinline preload="metadata" aria-label="3DRAE teaser">
+                <source src="assets/teasers/3drae.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="paper-body">
+              <div class="paper-tags" aria-label="Research topic and publication venue">
+                <span class="paper-tag paper-tag-topic">Perception</span>
                 <span class="paper-tag paper-tag-venue">arXiv 2026</span>
               </div>
-              <h3>VideoZeroBench: Probing the Limits of Video MLLMs with Spatio-Temporal Evidence Verification</h3>
-              <p class="authors"><a href="https://marinero4972.github.io/">Jiahao Meng</a>, <a href="https://tangent0308.github.io/">Yue Tan</a>, <span class="me">Qi Xu</span>, <a href="https://haochen-wang409.github.io/">Haochen Wang</a>, <a href="https://maverickren.github.io/MyProfile.github.io/">Zhongwei Ren</a>, <a href="https://scholar.google.com.hk/citations?user=a20rvfAAAAAJ">Weisong Liu</a>, Yuhao Wang, <a href="https://zrrskywalker.github.io/">Renrui Zhang</a>, <a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ">Yunhai Tong</a>, <a href="https://kennymckormick.github.io/">Haodong Duan</a></p>
-              <p>A hierarchical long-video QA benchmark that verifies answers with temporal intervals and spatial boxes under a five-level evidence protocol.</p>
+              <h3>Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale</h3>
+              <p class="authors"><a href="https://wswdx.github.io/">Dongxu Wei*</a>, <span class="me">Qi Xu*</span>, <a href="https://lizhiqi49.github.io/">Zhiqi Li</a>, Hangning Zhou, Cong Qiu, Hailong Qin, Mu Yang, Zhaopeng Cui, <a href="https://ethliup.github.io/">Peidong Liu</a></p>
+              <p>Performs 3D scene generation directly within an implicit 3D latent space using 3D Diffusion Transformers.</p>
               <div class="paper-links">
-                <a href="https://marinero4972.github.io/projects/VideoZeroBench/">Project</a>
-                <a href="https://arxiv.org/abs/2604.01569">ArXiv</a>
-                <a href="https://github.com/marinero4972/VideoZeroBench">Code</a>
+                <a href="https://wswdx.github.io/3DRAE">Project</a>
+                <a href="https://arxiv.org/abs/2604.11331">ArXiv</a>
+                <a href="https://github.com/WU-CVGL/3DRAE">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper paper-supir paper-text-only">
+            <div class="paper-body">
+              <div class="paper-tags" aria-label="Publication venue and authorship">
+                <span class="paper-tag paper-tag-venue">ECCV 2026</span>
+                <span class="paper-tag paper-tag-corresponding">Corresponding Author</span>
+              </div>
+              <h3>SupIR-GS: Thermal Infrared Super-Resolution Novel View Synthesis with Imaging-Calibrated 3D Gaussian Splatting</h3>
+              <p class="authors">Jin Liu, Haodong Li, Jiagang Chen, Dabin leng, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, <span class="me">Qi Xu</span><sup>†</sup>, Zhiwen Zheng, Xingru Huang<sup>†</sup></p>
+              <p>Reconstructs high-resolution 3D thermal scenes from low-resolution inputs via physics-informed degradation modeling.</p>
+              <div class="paper-links">
+                <a href="https://eccv.ecva.net/virtual/2026/poster/5680">ECCV</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper paper-rgbtir paper-text-only">
+            <div class="paper-body">
+              <div class="paper-tags" aria-label="Publication venue and authorship">
+                <span class="paper-tag paper-tag-venue">ECCV 2026</span>
+                <span class="paper-tag paper-tag-corresponding">Corresponding Author</span>
+              </div>
+              <h3>Physically Grounded Dual-Opacity Gaussian Splatting for Joint RGB-TIR Reconstruction</h3>
+              <p class="authors">Jin Liu, Dabin leng, Jiagang Chen, Haodong Li, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, Zhiwen Zheng, Xingru Huang<sup>†</sup>, <span class="me">Qi Xu</span><sup>†</sup></p>
+              <p>A unified RGB-TIR reconstruction framework resolving cross-spectral visibility conflicts through thermal field modeling.</p>
+              <div class="paper-links">
+                <a href="https://eccv.ecva.net/virtual/2026/poster/5920">ECCV</a>
               </div>
             </div>
           </article>
@@ -396,52 +426,15 @@
         </div>
       </section>
 
-      <section class="section two-column" aria-labelledby="advised-publications-title">
-        <div class="section-title">
-          <h2 id="advised-publications-title">Publications with Advised Students</h2>
-        </div>
-        <div class="compact-papers">
-          <article>
-            <p class="venue">ECCV 2026</p>
-            <h3>SupIR-GS: Thermal Infrared Super-Resolution Novel View Synthesis with Imaging-Calibrated 3DGS</h3>
-            <p class="authors">Jin Liu, Haodong Li, Jiagang Chen, Dabin leng, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, <span class="me">Qi Xu</span><sup>†</sup>, Zhiwen Zheng, Xingru Huang<sup>†</sup></p>
-            <p>Reconstructs high-resolution 3D thermal scenes from low-resolution inputs via physics-informed degradation modeling.</p>
-          </article>
-
-          <article>
-            <p class="venue">ECCV 2026</p>
-            <h3>Physically Grounded Dual-Opacity Gaussian Splatting for Joint RGB-TIR Reconstruction</h3>
-            <p class="authors">Jin Liu, Dabin leng, Jiagang Chen, Haodong Li, Jiguang Li, Zhao Huang, Xiaoshuai Zhang, Zhiwen Zheng, Xingru Huang<sup>†</sup>, <span class="me">Qi Xu</span><sup>†</sup></p>
-            <p>A unified RGB-TIR reconstruction framework resolving cross-spectral visibility conflicts through thermal field modeling.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section two-column talk-section" id="talks" aria-labelledby="talks-title">
-        <div class="section-title">
-          <h2 id="talks-title">Invited Talks</h2>
-        </div>
-        <div class="talk-list">
-          <article class="talk-item">
-            <time datetime="2026-08-06">Aug 2026</time>
-            <div class="talk-copy">
-              <h3>Post-Training of Multimodal Large Language Models</h3>
-              <p>Data, Optimization and Evaluation · Hangzhou Dianzi University</p>
-            </div>
-            <a class="talk-slides" href="assets/talks/mllm-posttraining-hdu.pdf">Slides</a>
-          </article>
-        </div>
-      </section>
-
       <section class="section two-column" id="contact" aria-labelledby="contact-title">
         <div class="section-title">
           <h2 id="contact-title">Contact</h2>
         </div>
         <div>
           <p>
-            I am open to research conversations and collaborations on spatial world
-            models, embodied intelligence, 3D scene representations, and multimodal
-            systems that connect perception with prediction and action.
+            I am open to research conversations and collaborations on multimodal
+            large language models, video understanding, spatio-temporal reasoning,
+            and multimodal data and post-training.
           </p>
           <div class="contact-links">
             <a href="mailto:insomniaaac@qq.com">insomniaaac@qq.com</a>
@@ -454,7 +447,7 @@
 
     <footer class="footer">
       <span>Qi Xu</span>
-      <span>Last updated August 2026</span>
+      <span>Last updated September 2026</span>
     </footer>
     <script>
       const researchSection = document.querySelector(".research-section");
